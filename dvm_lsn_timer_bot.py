@@ -33,8 +33,8 @@ def timer(chat_id, message, bot):
 
 def main():
     load_dotenv()
-    TG_TOKEN = os.getenv("TELEGRAM_TOKEN")
-    bot = ptbot.Bot(TG_TOKEN)
+    tg_token = os.getenv("TELEGRAM_TOKEN")
+    bot = ptbot.Bot(tg_token)
     bot.reply_on_message(timer, bot=bot)
     bot.run_bot()
 
